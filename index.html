@@ -1,685 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FourLoop Inc - Tech Innovation Company</title>
-    <meta name="description" content="FourLoop Inc - A professional tech-based company delivering innovative solutions">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Custom Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'fourloop-blue': '#1e40af',
-                        'fourloop-dark': '#1e293b',
-                        'fourloop-gray': '#64748b'
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Google Fonts -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FourLoop builds digital systems for ambitious businesses.">
+    <title>FourLoop — Digital systems for ambitious businesses</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="font-sans">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold text-fourloop-blue">FourLoop</h1>
-                        <span class="text-sm text-fourloop-gray">Inc</span>
-                    </div>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#home" class="text-fourloop-dark hover:text-fourloop-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Home</a>
-                        <a href="#about" class="text-fourloop-dark hover:text-fourloop-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">About</a>
-                        <a href="#services" class="text-fourloop-dark hover:text-fourloop-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Services</a>
-                        <a href="#team" class="text-fourloop-dark hover:text-fourloop-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Team</a>
-                        <a href="#contact" class="text-fourloop-dark hover:text-fourloop-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Contact</a>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button type="button" class="mobile-menu-button bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile Navigation Menu -->
-            <div class="mobile-menu hidden md:hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="#home" class="text-fourloop-dark hover:text-fourloop-blue block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                    <a href="#about" class="text-fourloop-dark hover:text-fourloop-blue block px-3 py-2 rounded-md text-base font-medium">About</a>
-                    <a href="#services" class="text-fourloop-dark hover:text-fourloop-blue block px-3 py-2 rounded-md text-base font-medium">Services</a>
-                    <a href="#team" class="text-fourloop-dark hover:text-fourloop-blue block px-3 py-2 rounded-md text-base font-medium">Team</a>
-                    <a href="#contact" class="text-fourloop-dark hover:text-fourloop-blue block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-                </div>
-            </div>
-        </div>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header glass">
+      <a class="brand" href="#top" aria-label="FourLoop home">
+        <img class="logo logo-light" src="assets/images/logo-horizontal-light.svg" width="700" height="200" alt="FourLoop">
+        <img class="logo logo-dark" src="assets/images/logo-horizontal-dark.svg" width="700" height="200" alt="">
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="theme-toggle" aria-label="Switch to dark mode"><span aria-hidden="true">◐</span></button>
+        <a class="header-cta" href="#contact">Start a conversation</a>
+        <button class="icon-button menu-button" id="menu-toggle" aria-label="Open menu" aria-expanded="false"><span aria-hidden="true">☰</span></button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <div class="slideover-header">
+        <a class="brand" href="#top" aria-label="FourLoop home">
+          <img class="logo logo-light" src="assets/images/logo-horizontal-light.svg" width="700" height="200" alt="FourLoop">
+          <img class="logo logo-dark" src="assets/images/logo-horizontal-dark.svg" width="700" height="200" alt="">
+        </a>
+        <button class="icon-button" id="mobile-close" aria-label="Close menu"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="slideover-links">
+        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
+      </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-                    Welcome to <span class="text-yellow-300">FourLoop Inc</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 text-gray-200 animate-fade-in-delay">
-                    Innovating the Future Through Technology
-                </p>
-                <p class="text-lg md:text-xl mb-12 text-gray-300 max-w-3xl mx-auto">
-                    We are a tech-based company dedicated to delivering cutting-edge solutions that transform businesses and drive innovation. With our expert team of four professionals, we bring ideas to life through technology.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#about" class="bg-white text-fourloop-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        Learn More
-                    </a>
-                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-fourloop-blue transition-colors duration-200 inline-flex items-center justify-center">
-                        <i class="fas fa-envelope mr-2"></i>
-                        Get In Touch
-                    </a>
-                </div>
-            </div>
+    <main id="main-content">
+      <section class="hero shell" id="top">
+        <p class="eyebrow">Digital systems for ambitious businesses</p>
+        <div class="hero-grid">
+          <h1>Innovating the future <em>through</em> technology.</h1>
+          <div class="hero-copy">
+            <p>We design and deliver digital solutions that transform businesses, empower teams, and create lasting impact.</p>
+            <div class="button-row"><a class="button primary" href="#expertise">Explore expertise</a><a class="button secondary" href="#contact">Get a quote <span aria-hidden="true">↗</span></a></div>
+          </div>
         </div>
-        
-        <!-- Scroll Down Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#about" class="text-white hover:text-yellow-300 transition-colors duration-200">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
+        <div class="metrics glass">
+          <div><strong>10+</strong><span>Years solving complex challenges</span></div>
+          <div><strong>6</strong><span>Core delivery disciplines</span></div>
+          <div><strong>∞</strong><span>Ways to move your business forward</span></div>
         </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-fourloop-dark mb-4">About FourLoop Inc</h2>
-                <div class="w-24 h-1 bg-fourloop-blue mx-auto mb-8"></div>
-                <p class="text-lg text-fourloop-gray max-w-3xl mx-auto">
-                    Founded on innovation and driven by passion, FourLoop Inc represents the pinnacle of modern technology solutions.
-                </p>
-            </div>
+      <section class="section dark-band" id="about">
+        <div class="shell two-column"><p class="eyebrow">Who we are</p><div><h2>A dedicated team building better ways to work.</h2><p class="lead">FourLoop brings together technologists, designers, and strategists to create growth, efficiency, and stronger customer experiences.</p><div class="value-grid"><article><h3>Mission</h3><p>Empower businesses with smart, scalable technology.</p></article><article><h3>Vision</h3><p>Shape the future of industries through digital transformation.</p></article><article><h3>Values</h3><p>Innovation, collaboration, excellence, and integrity.</p></article></div></div></div>
+      </section>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Company Info -->
-                <div>
-                    <h3 class="text-2xl font-semibold text-fourloop-dark mb-6">Our Story</h3>
-                    <p class="text-fourloop-gray mb-6 leading-relaxed">
-                        FourLoop Inc was born from the vision of creating a technology company that doesn't just follow trends but sets them. 
-                        With our compact but highly skilled team of four professionals, we've cultivated an environment where innovation thrives 
-                        and excellence is the standard.
-                    </p>
-                    <p class="text-fourloop-gray mb-8 leading-relaxed">
-                        Our approach combines cutting-edge technology with deep industry expertise to deliver solutions that are not only 
-                        functional but transformative. We believe that great technology should empower businesses to reach new heights.
-                    </p>
-
-                    <!-- Key Stats -->
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="text-center p-6 bg-white rounded-lg shadow-md">
-                            <div class="text-3xl font-bold text-fourloop-blue mb-2">4</div>
-                            <div class="text-fourloop-gray">Expert Team Members</div>
-                        </div>
-                        <div class="text-center p-6 bg-white rounded-lg shadow-md">
-                            <div class="text-3xl font-bold text-fourloop-blue mb-2">100%</div>
-                            <div class="text-fourloop-gray">Client Satisfaction</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Values -->
-                <div>
-                    <h3 class="text-2xl font-semibold text-fourloop-dark mb-6">Our Values</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-fourloop-blue rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-lightbulb text-white text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-fourloop-dark mb-2">Innovation</h4>
-                                <p class="text-fourloop-gray">We constantly push boundaries and explore new possibilities to deliver groundbreaking solutions.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-fourloop-blue rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-users text-white text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-fourloop-dark mb-2">Collaboration</h4>
-                                <p class="text-fourloop-gray">Our small team size enables seamless collaboration and ensures every voice is heard.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-fourloop-blue rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-trophy text-white text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-fourloop-dark mb-2">Excellence</h4>
-                                <p class="text-fourloop-gray">We maintain the highest standards in everything we do, from code quality to client relationships.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-fourloop-blue rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-rocket text-white text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-fourloop-dark mb-2">Growth</h4>
-                                <p class="text-fourloop-gray">We believe in continuous learning and adapting to the ever-evolving technology landscape.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <section class="section shell" id="expertise">
+        <div class="section-heading"><div><p class="eyebrow">What we do</p><h2>Expertise that meets the moment.</h2></div><p>From a clearer process to a full digital platform, we create the foundation for what comes next.</p></div>
+        <div class="expertise-grid">
+          <article class="glass card"><span>01</span><h3>ERP &amp; operations</h3><p>Connected workflows for inventory, finance, reporting, procurement, and the teams that run them.</p></article>
+          <article class="glass card"><span>02</span><h3>B2B platforms</h3><p>Secure partner portals, approval flows, account experiences, and systems that strengthen business relationships.</p></article>
+          <article class="glass card"><span>03</span><h3>PHP &amp; web systems</h3><p>Reliable, scalable custom applications engineered around the way your business actually works.</p></article>
+          <article class="glass card"><span>04</span><h3>Mobile experiences</h3><p>Fast, intuitive applications that meet customers and teams wherever they work.</p></article>
+          <article class="glass card"><span>05</span><h3>Cloud &amp; DevOps</h3><p>Modern infrastructure, release automation, and observability that make delivery calmer and faster.</p></article>
+          <article class="glass card"><span>06</span><h3>AI &amp; automation</h3><p>Practical intelligence and workflow automation that help teams make better decisions sooner.</p></article>
         </div>
-    </section>
+      </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-fourloop-dark mb-4">Our Services</h2>
-                <div class="w-24 h-1 bg-fourloop-blue mx-auto mb-8"></div>
-                <p class="text-lg text-fourloop-gray max-w-3xl mx-auto">
-                    We offer comprehensive technology solutions tailored to meet the unique needs of modern businesses.
-                </p>
-            </div>
+      <section class="section soft-band" id="approach">
+        <div class="shell"><p class="eyebrow">How we deliver</p><div class="section-heading"><h2>Thoughtful from first conversation to lasting value.</h2><p>We combine strategic thinking with hands-on delivery so the details, the people, and the outcome stay connected.</p></div><div class="steps"><article class="glass"><span>01</span><h3>Understand</h3><p>Listen deeply to goals, people, and the work behind the request.</p></article><article class="glass"><span>02</span><h3>Shape</h3><p>Translate insights into a focused plan and practical architecture.</p></article><article class="glass"><span>03</span><h3>Build</h3><p>Create with care, iterate openly, and protect quality at every stage.</p></article><article class="glass"><span>04</span><h3>Evolve</h3><p>Support, improve, and scale the system as your business grows.</p></article></div></div>
+      </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Web Development -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-fourloop-blue rounded-lg flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-code text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-fourloop-dark mb-4 text-center">Web Development</h3>
-                    <p class="text-fourloop-gray text-center mb-6">
-                        Modern, responsive, and scalable web applications built with the latest technologies and best practices.
-                    </p>
-                    <ul class="text-sm text-fourloop-gray space-y-2">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Frontend Development</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Backend Systems</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>API Development</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Database Design</li>
-                    </ul>
-                </div>
+      <section class="section shell">
+        <div class="case-layout"><div><p class="eyebrow">Solution patterns</p><h2>Built for real business complexity.</h2><p class="lead">Our experience spans the systems that keep modern businesses moving—without putting client work in the spotlight.</p></div><div><div class="filters" role="group" aria-label="Filter solution patterns"><button class="active" data-filter="all">All</button><button data-filter="erp">ERP</button><button data-filter="b2b">B2B</button><button data-filter="php">PHP</button><button data-filter="commerce">Commerce</button></div><div class="case-grid" id="case-grid"><article class="case glass" data-type="erp"><small>ERP</small><h3>Operations at a glance</h3><p>Unified inventory, orders, billing, and reporting into one dependable view.</p></article><article class="case glass" data-type="b2b"><small>B2B</small><h3>Partner-first platforms</h3><p>Built secure digital spaces for partners to transact, collaborate, and grow together.</p></article><article class="case glass" data-type="php"><small>PHP</small><h3>Purpose-built web systems</h3><p>Created scalable platforms that replace manual work with resilient digital workflows.</p></article><article class="case glass" data-type="commerce"><small>Commerce</small><h3>Connected commerce</h3><p>Linked catalogues, order management, and customer journeys into a seamless experience.</p></article></div></div></div>
+      </section>
 
-                <!-- Mobile App Development -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-fourloop-blue rounded-lg flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-fourloop-dark mb-4 text-center">Mobile Applications</h3>
-                    <p class="text-fourloop-gray text-center mb-6">
-                        Native and cross-platform mobile applications that deliver exceptional user experiences.
-                    </p>
-                    <ul class="text-sm text-fourloop-gray space-y-2">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>iOS Development</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Android Development</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Cross-Platform Apps</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>App Store Deployment</li>
-                    </ul>
-                </div>
+      <section class="shell"><div class="team-panel"><p class="eyebrow">One team, many strengths</p><h2>The right people, aligned around your outcome.</h2><div class="discipline-grid"><span>Product strategy</span><span>Experience design</span><span>Software engineering</span><span>Cloud architecture</span><span>Quality assurance</span><span>Delivery leadership</span></div></div></section>
 
-                <!-- Cloud Solutions -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-fourloop-blue rounded-lg flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-cloud text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-fourloop-dark mb-4 text-center">Cloud Solutions</h3>
-                    <p class="text-fourloop-gray text-center mb-6">
-                        Scalable cloud infrastructure and services to power your business operations efficiently.
-                    </p>
-                    <ul class="text-sm text-fourloop-gray space-y-2">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Cloud Migration</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Infrastructure Setup</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>DevOps Solutions</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Performance Optimization</li>
-                    </ul>
-                </div>
+      <section class="section contact-section" id="contact"><div class="shell contact-layout"><div><p class="eyebrow">Let’s talk</p><h2>Let’s build something amazing together.</h2><p class="lead">Have a project in mind or need expert guidance? Tell us what you’re working toward.</p><a class="email-link" href="mailto:info@fourloop.net">info@fourloop.net ↗</a></div><form class="glass contact-form" id="contact-form"><label>Name<input name="name" autocomplete="name" required placeholder="Your name"></label><label>Email<input name="email" type="email" autocomplete="email" required placeholder="you@company.com"></label><label>Company<input name="company" autocomplete="organization" placeholder="Company name"></label><label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="Optional"></label><label class="full-width">Project details<textarea name="message" required placeholder="A little about what you want to achieve"></textarea></label><div class="full-width"><button class="button primary" type="submit">Send inquiry <span aria-hidden="true">↗</span></button><p class="form-message" id="form-message" role="status"></p></div></form></div></section>
+    </main>
 
-                <!-- AI & Machine Learning -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-fourloop-blue rounded-lg flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-brain text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-fourloop-dark mb-4 text-center">AI & Machine Learning</h3>
-                    <p class="text-fourloop-gray text-center mb-6">
-                        Intelligent solutions that leverage artificial intelligence to automate and optimize business processes.
-                    </p>
-                    <ul class="text-sm text-fourloop-gray space-y-2">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Machine Learning Models</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Data Analysis</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Predictive Analytics</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>AI Integration</li>
-                    </ul>
-                </div>
-
-                <!-- Cybersecurity -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-fourloop-blue rounded-lg flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-shield-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-fourloop-dark mb-4 text-center">Cybersecurity</h3>
-                    <p class="text-fourloop-gray text-center mb-6">
-                        Comprehensive security solutions to protect your digital assets and ensure business continuity.
-                    </p>
-                    <ul class="text-sm text-fourloop-gray space-y-2">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Security Audits</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Penetration Testing</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Security Implementation</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Compliance Solutions</li>
-                    </ul>
-                </div>
-
-                <!-- Consulting -->
-                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-fourloop-blue rounded-lg flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-chart-line text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-fourloop-dark mb-4 text-center">Tech Consulting</h3>
-                    <p class="text-fourloop-gray text-center mb-6">
-                        Strategic technology consulting to help your business make informed decisions and stay competitive.
-                    </p>
-                    <ul class="text-sm text-fourloop-gray space-y-2">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Technology Strategy</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Digital Transformation</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>System Architecture</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Process Optimization</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Call to Action -->
-            <div class="text-center mt-16">
-                <h3 class="text-2xl font-semibold text-fourloop-dark mb-4">Ready to Transform Your Business?</h3>
-                <p class="text-fourloop-gray mb-8 max-w-2xl mx-auto">
-                    Let's discuss how FourLoop Inc can help you leverage technology to achieve your business goals.
-                </p>
-                <a href="#contact" class="bg-fourloop-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 inline-flex items-center">
-                    <i class="fas fa-arrow-right mr-2"></i>
-                    Start Your Project
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-fourloop-dark mb-4">Meet Our Team</h2>
-                <div class="w-24 h-1 bg-fourloop-blue mx-auto mb-8"></div>
-                <p class="text-lg text-fourloop-gray max-w-3xl mx-auto">
-                    Our diverse team of four professionals brings together expertise, creativity, and passion to deliver exceptional results.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Team Member 1 -->
-                <div class="team-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="aspect-square bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
-                        <i class="fas fa-user text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold text-fourloop-dark mb-2">Alex Thompson</h3>
-                        <p class="text-fourloop-blue font-medium mb-3">CEO & Lead Developer</p>
-                        <p class="text-sm text-fourloop-gray mb-4">
-                            Visionary leader with 8+ years in full-stack development. Specializes in system architecture and team leadership.
-                        </p>
-                        <div class="flex justify-center space-x-3">
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-linkedin text-xl"></i>
-                            </a>
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-github text-xl"></i>
-                            </a>
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-twitter text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 2 -->
-                <div class="team-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="aspect-square bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
-                        <i class="fas fa-user text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold text-fourloop-dark mb-2">Sarah Chen</h3>
-                        <p class="text-fourloop-blue font-medium mb-3">CTO & AI Specialist</p>
-                        <p class="text-sm text-fourloop-gray mb-4">
-                            Machine learning expert with a PhD in Computer Science. Leads our AI initiatives and cloud architecture.
-                        </p>
-                        <div class="flex justify-center space-x-3">
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-linkedin text-xl"></i>
-                            </a>
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-github text-xl"></i>
-                            </a>
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-twitter text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 3 -->
-                <div class="team-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="aspect-square bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
-                        <i class="fas fa-user text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold text-fourloop-dark mb-2">Marcus Rodriguez</h3>
-                        <p class="text-fourloop-blue font-medium mb-3">UX/UI Designer</p>
-                        <p class="text-sm text-fourloop-gray mb-4">
-                            Creative designer with expertise in user experience and interface design. Makes technology beautiful and intuitive.
-                        </p>
-                        <div class="flex justify-center space-x-3">
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-linkedin text-xl"></i>
-                            </a>
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-dribbble text-xl"></i>
-                            </a>
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-behance text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 4 -->
-                <div class="team-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="aspect-square bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
-                        <i class="fas fa-user text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold text-fourloop-dark mb-2">Emma Watson</h3>
-                        <p class="text-fourloop-blue font-medium mb-3">Security & DevOps Engineer</p>
-                        <p class="text-sm text-fourloop-gray mb-4">
-                            Cybersecurity expert and DevOps specialist. Ensures our solutions are secure, scalable, and reliable.
-                        </p>
-                        <div class="flex justify-center space-x-3">
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-linkedin text-xl"></i>
-                            </a>
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-github text-xl"></i>
-                            </a>
-                            <a href="#" class="text-fourloop-gray hover:text-fourloop-blue transition-colors duration-200">
-                                <i class="fab fa-twitter text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Values -->
-            <div class="mt-16 bg-white rounded-xl p-8">
-                <div class="text-center">
-                    <h3 class="text-2xl font-semibold text-fourloop-dark mb-6">Why Choose Our Team?</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-fourloop-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-handshake text-white text-xl"></i>
-                            </div>
-                            <h4 class="text-lg font-semibold text-fourloop-dark mb-2">Collaborative Approach</h4>
-                            <p class="text-fourloop-gray text-sm">We work closely with our clients as partners, ensuring transparency and alignment throughout the project.</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-fourloop-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-cog text-white text-xl"></i>
-                            </div>
-                            <h4 class="text-lg font-semibold text-fourloop-dark mb-2">Technical Excellence</h4>
-                            <p class="text-fourloop-gray text-sm">Our team combines deep technical knowledge with practical experience to deliver robust solutions.</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-fourloop-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-clock text-white text-xl"></i>
-                            </div>
-                            <h4 class="text-lg font-semibold text-fourloop-dark mb-2">Timely Delivery</h4>
-                            <p class="text-fourloop-gray text-sm">We pride ourselves on meeting deadlines while maintaining the highest quality standards.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-fourloop-dark mb-4">Get In Touch</h2>
-                <div class="w-24 h-1 bg-fourloop-blue mx-auto mb-8"></div>
-                <p class="text-lg text-fourloop-gray max-w-3xl mx-auto">
-                    Ready to start your next project? We'd love to hear from you. Let's discuss how we can help bring your ideas to life.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Information -->
-                <div>
-                    <h3 class="text-2xl font-semibold text-fourloop-dark mb-8">Let's Start a Conversation</h3>
-                    
-                    <div class="space-y-6 mb-8">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-fourloop-blue rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-fourloop-dark mb-1">Visit Us</h4>
-                                <p class="text-fourloop-gray">
-                                    123 Innovation Drive<br>
-                                    Tech Hub, San Francisco<br>
-                                    CA 94107, USA
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-fourloop-blue rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-phone text-white text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-fourloop-dark mb-1">Call Us</h4>
-                                <p class="text-fourloop-gray">
-                                    +1 (555) 123-4567<br>
-                                    Mon - Fri: 9AM - 6PM PST
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-fourloop-blue rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-envelope text-white text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-fourloop-dark mb-1">Email Us</h4>
-                                <p class="text-fourloop-gray">
-                                    hello@fourloop.com<br>
-                                    projects@fourloop.com
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Social Links -->
-                    <div>
-                        <h4 class="text-lg font-semibold text-fourloop-dark mb-4">Follow Us</h4>
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 bg-fourloop-blue rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors duration-200">
-                                <i class="fab fa-linkedin text-lg"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-fourloop-blue rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors duration-200">
-                                <i class="fab fa-twitter text-lg"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-fourloop-blue rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors duration-200">
-                                <i class="fab fa-github text-lg"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-fourloop-blue rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors duration-200">
-                                <i class="fab fa-instagram text-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <h3 class="text-2xl font-semibold text-fourloop-dark mb-6">Send Us a Message</h3>
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label for="firstName" class="block text-sm font-medium text-fourloop-dark mb-2">First Name</label>
-                                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fourloop-blue focus:border-transparent outline-none transition-all duration-200" placeholder="John">
-                            </div>
-                            <div>
-                                <label for="lastName" class="block text-sm font-medium text-fourloop-dark mb-2">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fourloop-blue focus:border-transparent outline-none transition-all duration-200" placeholder="Doe">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-fourloop-dark mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fourloop-blue focus:border-transparent outline-none transition-all duration-200" placeholder="john@example.com">
-                        </div>
-
-                        <div>
-                            <label for="company" class="block text-sm font-medium text-fourloop-dark mb-2">Company (Optional)</label>
-                            <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fourloop-blue focus:border-transparent outline-none transition-all duration-200" placeholder="Your Company">
-                        </div>
-
-                        <div>
-                            <label for="service" class="block text-sm font-medium text-fourloop-dark mb-2">Service Interest</label>
-                            <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fourloop-blue focus:border-transparent outline-none transition-all duration-200">
-                                <option value="">Select a service</option>
-                                <option value="web-development">Web Development</option>
-                                <option value="mobile-apps">Mobile Applications</option>
-                                <option value="cloud-solutions">Cloud Solutions</option>
-                                <option value="ai-ml">AI & Machine Learning</option>
-                                <option value="cybersecurity">Cybersecurity</option>
-                                <option value="consulting">Tech Consulting</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-fourloop-dark mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fourloop-blue focus:border-transparent outline-none transition-all duration-200 resize-vertical" placeholder="Tell us about your project..."></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full bg-fourloop-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center">
-                            <i class="fas fa-paper-plane mr-2"></i>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-fourloop-dark text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div class="col-span-1 md:col-span-2">
-                    <h3 class="text-2xl font-bold mb-4">FourLoop Inc</h3>
-                    <p class="text-gray-400 mb-6 max-w-md">
-                        A technology company dedicated to innovation and excellence. We transform businesses through cutting-edge solutions and strategic partnerships.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
-                            <i class="fab fa-github text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-200">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-200">About</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors duration-200">Services</a></li>
-                        <li><a href="#team" class="text-gray-400 hover:text-white transition-colors duration-200">Team</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-200">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            San Francisco, CA
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-2"></i>
-                            +1 (555) 123-4567
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2"></i>
-                            hello@fourloop.com
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400">
-                    &copy; 2024 FourLoop Inc. All rights reserved. | 
-                    <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> | 
-                    <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-</body>
+    <footer><div class="shell"><span>© 2025 FourLoop. All rights reserved.</span><div><a href="#top">Home</a><a href="#expertise">Expertise</a><a href="#contact">Contact</a></div></div></footer>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
