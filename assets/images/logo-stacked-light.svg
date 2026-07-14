@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480">
+  <g fill="none" stroke-width="24" stroke-linecap="round" transform="translate(80,20)">
+    <path d="M 100.00,40.00 A 60,60 0 0,1 152.98,71.83" stroke="#4F3CE0"/>
+    <path d="M 160.00,100.00 A 60,60 0 0,1 128.17,152.98" stroke="#4A63EE"/>
+    <path d="M 100.00,160.00 A 60,60 0 0,1 47.02,128.17" stroke="#3E9FE0"/>
+    <path d="M 40.00,100.00 A 60,60 0 0,1 71.83,47.02" stroke="#22D3C6"/>
+  </g>
+  <text x="180" y="400" text-anchor="middle" dominant-baseline="central" font-family="Poppins" font-weight="600" font-size="68" letter-spacing="-1.5" fill="#14121F">four<tspan fill="#4A63EE">loop</tspan></text>
+</svg>

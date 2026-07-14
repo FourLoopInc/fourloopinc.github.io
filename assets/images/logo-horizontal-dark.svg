@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200">
+  <g fill="none" stroke-width="24" stroke-linecap="round">
+    <path d="M 100.00,40.00 A 60,60 0 0,1 152.98,71.83" stroke="#6E63FF"/>
+    <path d="M 160.00,100.00 A 60,60 0 0,1 128.17,152.98" stroke="#5D82FF"/>
+    <path d="M 100.00,160.00 A 60,60 0 0,1 47.02,128.17" stroke="#4FBBF5"/>
+    <path d="M 40.00,100.00 A 60,60 0 0,1 71.83,47.02" stroke="#2EE9DA"/>
+  </g>
+  <g font-family="Poppins, Arial, sans-serif" font-weight="600" font-size="86" letter-spacing="-2">
+    <text x="222" y="130" fill="#FFFFFF">four</text>
+    <text x="390" y="100" fill="#6EE7DE">loop</text>
+  </g>
+</svg>
